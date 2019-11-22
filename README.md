@@ -8,6 +8,8 @@ You can visit [my deployment of the example online](https://django-channels-exam
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/jacobian/channels-example)
 
+You need to run `heroku ps:scale web=1:free worker=1:free` after deploying
+
 ## Running locally
 
 To run this app locally, you'll need Python, Postgres, and Redis. (On my Mac, I installed [Postgres.app](http://postgresapp.com/documentation/) and Redis from Homebrew (`brew install redis`).)
