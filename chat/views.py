@@ -2,6 +2,7 @@ import random
 import string
 from django.db import transaction
 from django.shortcuts import render, redirect
+from django.views.decorators.clickjacking import xframe_options_exempt
 import haikunator
 from .models import Room
 
@@ -21,6 +22,7 @@ def new_room(request):
             new_room = Room.objects.create(label=label)
     return redirect(chat_room, label=label)
 
+@xframe_options_exempt
 def chat_room(request, label):
     """
     Room view - show the room, with latest messages.
