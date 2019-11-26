@@ -8,7 +8,7 @@ You can visit [my deployment of the example online](https://django-channels-exam
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/jacobian/channels-example)
 
-You need to run `heroku ps:scale web=1:free worker=1:free` after deploying
+You need to run `heroku ps:scale web=1:free worker=1:free` and `heroku run python manage.py migrate` after deploying
 
 ## Running locally
 
